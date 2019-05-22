@@ -16,13 +16,12 @@ moves_maze =  np.array([
     [ 9., 9.,  9.,  9.,  9.,  9.,  9.,  9., 9., 9.]
 ])
 
-# env = gym.make('MazeNoFrameskip-v3')
-env = gym.make('maze-v0')
+env = gym.make('MazeNoFrameskip-v3')
 
 env.reset()
 action_set = [0,1,2,3]
 p_err = 0.25
-speed = 0.2 # in seconds must be greater than 0.2
+speed = 2.2 # in seconds must be greater than 0.2
 for _ in range(2):
 	done = False
 	env.reset()

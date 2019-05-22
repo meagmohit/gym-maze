@@ -30,10 +30,10 @@ register(
 #     nondeterministic=False,
 # )
 #
-# register(
-#     id='CatchNoFrameskip-v3',
-#     entry_point='gym_catch.atari:CatchEnv',
-#     kwargs={'grid_size': (10,10), 'bar_size': 1, 'total_balls': 10, 'tcp_tagging': True}, # A frameskip of 1 means we get every frame
-#     max_episode_steps=10000,
-#     nondeterministic=False,
-# )
+register(
+    id='MazeNoFrameskip-v3',
+    entry_point='gym_maze.atari:MazeEnv',
+    kwargs={'tcp_tagging': True}, # A frameskip of 1 means we get every frame
+    max_episode_steps=10000,
+    nondeterministic=False,
+)
