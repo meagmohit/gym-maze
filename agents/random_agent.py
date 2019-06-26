@@ -21,9 +21,9 @@ env = gym.make('maze-v0')
 
 env.reset()
 action_set = [0,1,2,3]
-p_err = 0.25
-speed = 0.2 # in seconds must be greater than 0.2
-for _ in range(2):
+p_err = 0.2
+speed = 1.5 # in seconds must be greater than 0.2
+for _ in range(1):
 	done = False
 	env.reset()
 	while not done:

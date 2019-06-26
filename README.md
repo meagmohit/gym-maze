@@ -34,7 +34,7 @@ env.render()
 
 * `agents/random_agent.py` random agent plays game with given error probability to take actions (Perr).
 * `agents/play.py` for humans to play the game. Keys w,s,a,d for UP, Down, Left and Right respectively.
-* `agents/agent_recordEEG_openLoop.py`  plays the game slow with TCP connection port to allow data stimulation recording
+* `agents/agent_recordEEG_openLoop.py`  plays the game slow with TCP connection port to allow data stimulations
 
 ## References
 -------------

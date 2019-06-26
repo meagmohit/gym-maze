@@ -107,7 +107,7 @@ class MazeEnv(gym.Env):
         # Sending the external stimulation over TCP port
         if self._tcp_tagging:
             padding=[0]*8
-            event_id = [0, 0, 0, agent_x, agent_y, ghost_x, ghost_y, action]
+            event_id = [0, 0, 0, agent_x, agent_y, agent_prev_x, agent_prev_y, action]
             timestamp=list(self.to_byte(int(time()*1000), 8))
             self._s.sendall(bytearray(padding+event_id+timestamp))
 
@@ -235,7 +235,7 @@ class MazeEnv(gym.Env):
             self.viewer.close()
             self.viewer = None
         if self._tcp_tagging:
-            self.s.close()
+            self._s.close()
 
     def _get_action_meanings(self):
         return [ACTION_MEANING[i] for i in self.action_set]
