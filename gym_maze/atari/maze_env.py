@@ -145,6 +145,9 @@ class MazeEnv(gym.Env):
         img[(self._offset + idx_x*block_width):(self._offset + (idx_x+1)*block_width), idx_y*block_width:(idx_y+1)*block_width, 1] = (1-arr_target)*255
         img[(self._offset + idx_x*block_width):(self._offset + (idx_x+1)*block_width), idx_y*block_width:(idx_y+1)*block_width, 0] = (1-arr_target)*255
 
+        # dstate=0: shows arrow with the intended movements
+        # dstate=1 and same new position i.e. no movement: no agent is displayed
+        # dstate=2: new position of the agent
 
         if dstate == 0:
             #Draw Previous Agent

@@ -21,8 +21,9 @@ env = gym.make('MazeNoFrameskip-v3')
 env.reset()
 action_set = [0,1,2,3]
 p_err = 0.2
-speed = 0.5 # in seconds must be greater than 0.2
-for _ in range(4):
+speed = 1.5 # in seconds must be greater than 0.2
+total_play = 1
+for _ in range(total_play):
     done = False
     env.reset()
     env.render()
@@ -43,8 +44,8 @@ for _ in range(4):
         # action = env.action_space.sample()
         observation, reward, done, info = env.step(action)
         print action, reward
-        env.render(dstate=0)
-        time.sleep(speed)
+        # env.render(dstate=0)
+        # time.sleep(speed)
         env.render(dstate=1)
         time.sleep(0.1)
         env.render(dstate=2)

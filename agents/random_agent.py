@@ -43,8 +43,8 @@ for _ in range(1):
 		# action = env.action_space.sample()
 		observation, reward, done, info = env.step(action)
 		print action, reward
-		env.render(dstate=0)
-		time.sleep(speed)
+		# env.render(dstate=0)
+		# time.sleep(speed)
 		env.render(dstate=1)
 		time.sleep(0.1)
 		env.render(dstate=2)
